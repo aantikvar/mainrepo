@@ -18,7 +18,7 @@ object LearnSolving {
   var countWords = scala.collection.mutable.Map[String, Int]()
 
   def read() {
-    val in = new java.util.Scanner(new java.io.File("C:\\Users\\apricolota\\Desktop\\gitBasic.txt"))
+    val in = new java.util.Scanner(new java.io.File("C:\\Users\\apricolota\\Desktop\\DESKTOP\\gitBasic.txt"))
     var i: Int = 1
     while (in.hasNext()) {
       countWords = countWords + (in.next() -> i)
@@ -113,9 +113,74 @@ class MilesToKilometers(miles: Double) {
   }
 
 
-    val source = Source.fromFile("C:\\Users\\apricolota\\Desktop\\gitBasic.txt", "UTF-8")
+    val source = Source.fromFile("C:\\Users\\apricolota\\Desktop\\DESKTOP\\gitBasic.txt", "UTF-8")
     val lineIterator = source.getLines()
     val contents = source.mkString
+
+  def formatResult(name: String, n: Int,  f: Int => Int) ={
+    val msg = "The %s of %d is %d."
+    msg.format(name, n, f(n))
+  }
+
+  def factorial(n: Int): Int = {
+    def go(n: Int, acc: Int): Int =
+      if (n <= 0) acc
+      else go(n-1, n*acc)
+    go(n, 1)
+  }
+
+  def abs(n: Int): Int = {
+    if (n < 0) -n
+    else n
+  }
+
+
+  val decodeString : String = "DECODE THIS!"
+  val dec: Array[Char] = decodeString.toCharArray()
+  val encodedString : String = "DO TEE!ISCDH"
+  for(i <- 1 to 26){
+
+  }
+  val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray()
+  def getLetterIndex(a: Char): Int = {
+    alphabet.indexOf(a)
+  }
+
+   var message :Array[Char] = new Array(decodeString.size)
+   message(0) = dec(0)
+   var i: Int  = 0
+   var t  = message.iterator
+   while (i < decodeString.size){
+
+     if (getLetterIndex(i) )
+     message(getLetterIndex(message(i))) = dec(i+1)
+
+     i += i
+
+
+   }
+   message(getLetterIndex(message(0))) = dec(1)
+
+
+
+
+
+ /* def putCharAtPlace(a: Char ): Array[Int] ={
+    for (x <- dec) {
+     message(0) =  getLetterIndex(x)
+    }
+  }*/
+
+
+
+
+
+ // val s: Int => Char = alphabet
+
+
+
+
+
 
 
 
@@ -124,7 +189,7 @@ class MilesToKilometers(miles: Double) {
     println(scores.getOrElse("Bob", 0))
     println (scores)
     read()
-    println(myCounter.current)
+    //println(myCounter.current)
     println(new chatter.Member("Wariior"))
     println(myFace)
     println (acct)
@@ -132,7 +197,9 @@ class MilesToKilometers(miles: Double) {
     println (pers.description)
     println(inchesToCentimeters(22.0))
     println(contents)
-
+    println(formatResult("absolute value", -42, abs))
+    println(formatResult("factorial", 5, factorial))
+    println(getLetterIndex(selectIndexes(dec)))
 
   }
 
