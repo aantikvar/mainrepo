@@ -1,0 +1,69 @@
+This is a test. Let's start to understand how GIT is used =>
+Third line was added specially for see differences using "git diff HEAD".
+
+And now, try some new commands for git.
+ 
+	'git clone' => Used for clonning repository into a new directory.
+
+
+	'git pull'  => Used to fetch from and integrate with another reposiotry or local branch.
+
+		Assume the following history exists and the current branch is "master":
+
+	  		A---B---C master on origin
+	 		/
+   		   D---E---F---G master
+	               ^
+	               origin/master in your repository
+
+   Then "git pull" will fetch and replay the changes from the remote master branch since it diverged from the local master (i.e., E) 
+  until its current commit (C) on top of master and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes.
+
+	               A---B---C origin/master
+  	     	      /         \
+                 D---E---F---G---H master
+	to cancel a conflicting merge, use git 'reset --merge'.
+
+	'git fetch'    => Used to download objects and refs from another repository.
+
+	'git merge'    => Used to join two or more development histories together.
+
+	'git checkout' => Used to checkout a branch or paths to the working tree.
+
+	'git add'      => Used to add all file contents to the index.
+
+	'git-commit'   => Used to record changes to the repository.
+
+	'git push'     => Used to update remote refs along with associated objects.
+
+	'git-reset'    => Used to reset current HEAD to the specified state
+		'git reset' [-q] [<tree-ish>] [--] <paths>...
+		'git reset' (--patch | -p) [<tree-ish>] [--] [<paths>...]
+		'git reset' [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]
+
+	'git-cherry-pick' => Used to apply the changes introduced by some existing commits.
+
+	'git-blame'       => Used to show what revision and author last modified each line of a file.
+
+	'git-branch'      => List, create, or delete branches
+
+
+
+
+ 
+	
+
+	 
+
+	
+
+	
+	
+
+
+ 
+
+
+
+
+	
